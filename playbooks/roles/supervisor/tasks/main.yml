@@ -137,12 +137,12 @@
     owner={{ supervisor_user }} group={{ supervisor_service_user }}
     mode=0644
 
-- name: create a symlink for supervisortctl
-  file: >
-    src={{ supervisor_ctl }}
-    dest={{ COMMON_BIN_DIR }}/{{ supervisor_ctl|basename }}
-    state=link
-  when: supervisor_service == "supervisor"
+#- name: create a symlink for supervisortctl
+#  file: >
+#    src={{ supervisor_ctl }}
+#    dest={{ COMMON_BIN_DIR }}/{{ supervisor_ctl|basename }}
+#    state=link
+#  when: supervisor_service == "supervisor"
 
 - name: create a symlink for supervisor cfg
   file: >
